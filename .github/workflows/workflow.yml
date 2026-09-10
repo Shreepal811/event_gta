@@ -10,6 +10,17 @@ on:
             - "app/**"
             - ".github/workflows/**"
 
+    pull_request:
+        types:
+            - opened
+            - synchronize
+            - reopened
+            - closed
+            - ready_for_review
+
+        branches:
+            - "main"
+
 jobs:
     validation-job:
         runs-on: ubuntu-latest
