@@ -30,3 +30,4 @@ jobs:
            echo  "The pipeline ran successfully"
            echo "Repo Name: $GITHUB_REF"
            echo "Repo Owner: $GITHUB_REPOSITORY"
+           echo "event : $GITHUB_EVENT_NAME"
