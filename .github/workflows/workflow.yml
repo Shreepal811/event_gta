@@ -1,0 +1,21 @@
+name: "Event Triggeration"
+
+on:
+    push:
+         branches:
+            - 'releases/**'
+            - "devlop"
+
+         paths:
+            - "app/**"
+            - ".github/workflows/**"
+
+jobs:
+    validation-job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: "Information"
+          run: |
+           echo  "The pipeline ran successfully"
+           echo "Repo Name: $GITHUB_REF"
+           echo "Repo Owner: $GITHUB_REPOSITORY"
